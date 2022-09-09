@@ -36,7 +36,7 @@ alias_t *add_alias_end(alias_t **head, char *name, char *value)
 	{
 		last = *head;
 		while (last->next != NULL)
-			last = last->next;
+			last = (*last).next;
 		last->next = new_node;
 	}
 	else
@@ -61,7 +61,7 @@ list_t *add_node_end(list_t **head, char *dir)
 	if (!new_node)
 		return (NULL);
 
-	new_node->dir = dir;
+	(*new_node).dir = dir;
 	new_node->next = NULL;
 
 	if (*head)
