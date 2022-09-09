@@ -24,7 +24,7 @@ int shellby_alias(char **args, char __attribute__((__unused__)) **front)
 		while (temp)
 		{
 			print_alias(temp);
-			temp = temp->next;
+			temp = (*temp).next;
 		}
 		return (ret);
 	}
@@ -41,7 +41,7 @@ int shellby_alias(char **args, char __attribute__((__unused__)) **front)
 					print_alias(temp);
 					break;
 				}
-				temp = temp->next;
+				temp = (*temp).next;
 			}
 			if (!temp)
 				ret = create_error(args + i, 1);
@@ -84,7 +84,7 @@ void set_alias(char *var_name, char *value)
 			temp->value = new_value;
 			break;
 		}
-		temp = temp->next;
+		temp = (*temp).next;
 	}
 	if (!temp)
 		add_alias_end(&aliases, var_name, new_value);
@@ -144,7 +144,7 @@ char **replace_aliases(char **args)
 				i--;
 				break;
 			}
-			temp = temp->next;
+			temp = (*temp).next;
 		}
 	}
 

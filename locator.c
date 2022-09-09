@@ -39,7 +39,7 @@ char *get_location(char *command)
 			return (temp);
 		}
 
-		dirs = dirs->next;
+		dirs = (*dirs).next;
 		free(temp);
 	}
 
