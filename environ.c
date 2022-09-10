@@ -58,8 +58,7 @@ void free_env(void)
  * @var: The name of the environmental variable to get.
  *
  * Return: If the environmental variable does not exist - NULL.
- *         Otherwise - a pointer to the environmental variable.
- */
+ *         Otherwise - a pointer to the environmental variable. */
 char **_getenv(const char *var)
 {
 	int index, len;

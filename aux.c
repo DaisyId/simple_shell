@@ -74,8 +74,8 @@ char *_itoa(int num)
 
 /**
  * create_error - Writes a custom error message to stderr.
- * @args: An array of arguments.
- * @err: The error value.
+ * @args: An array of arguments as the first parameter.
+ * @err: The error value as the second paramere.
  *
  * Return: The error value.
  */
